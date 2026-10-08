@@ -61,7 +61,7 @@ public class GameManager {
         return this.phase == GamePhase.WAITING;
     }
 
-    /** タイマーが侵攻し、確保判定が有効な状態か*/
+    /** タイマーが進行し、確保判定が有効な状態か*/
     public boolean isRunning(){
         return this.phase == GamePhase.RUNNING;
     }
@@ -78,6 +78,7 @@ public class GameManager {
     }
 
     public void setWish(ServerPlayer player, RoleWish wish) {
+
         this.wishes.put(player.getUUID(), wish);
     }
 
